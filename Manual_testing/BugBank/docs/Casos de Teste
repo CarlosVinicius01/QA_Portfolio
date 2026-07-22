@@ -1,0 +1,282 @@
+CT - 001 | CADASTRO COM DADOS VÁLIDOS (COM SALDO INICIAL)
+
+    Objetivo:
+        Validar o cadastro de usuário utilizando dados válidos com saldo inicial.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário não cadastrado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        1- Acessar tela de cadastro.
+        2- Informar nome válido.
+        3- Informar e-mail válido.
+        4- Informar senha válida.
+        5- Confirmar senha.
+        6- Clicar em Cadastrar.
+        7- Marcar “Criar conta com saldo? “
+    
+    Resultado Esperado:
+        Conta criada com sucesso.
+        Usuário visualiza mensagem de sucesso.
+        Usuário é direcionado para a tela esperada após o cadastro.
+
+-----------------------------------------------------------------------------------
+
+CT - 002 | CADASTRO COM DADOS VÁLIDOS (SEM SALDO INICIAL)
+
+    Objetivo:
+        Validar o cadastro de usuário utilizando dados válidos com saldo inicial.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário não cadastrado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        1- Acessar tela de cadastro.
+        2- Informar nome válido.
+        3- Informar e-mail válido.
+        4- Informar senha válida.
+        5- Confirmar senha.
+        6- Clicar em Cadastrar.
+        7- Desmarcar “Criar conta com saldo? “
+    
+    Resultado Esperado:
+        Conta criada com sucesso.
+        Usuário visualiza mensagem de sucesso.
+        Usuário é direcionado para a tela esperada após o cadastro.
+
+-----------------------------------------------------------------------------------
+
+CT - 003 | CADASTRO COM E-MAIL INVÁLIDO
+
+    Objetivo:
+        Validar que o sistema impede o cadastro utilizando um e-mail em formato inválido.
+    
+    Prioridade:
+        Média
+    
+    Pré-condições:
+        Usuário não cadastrado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        1- Acessar tela de cadastro
+        2- Informar nome válido
+        3- Informar e-mail inválido (ex: teste@)
+        4- Informar senha válida
+        5- Confirmar senha
+        6- Clicar em Cadastrar
+
+    Resultado Esperado:
+        Sistema não permite o cadastro
+        Mensagem de erro é exibida para o campo e-mail
+
+-----------------------------------------------------------------------------------
+
+CT - 004 | CADASTRO SEM PREENCHER O NOME
+
+    Objetivo:
+        Validar que o campo Nome é obrigatório para realizar o cadastro.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário não cadastrado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        1- Acessar tela de cadastro
+        2- Deixar campo Nome vazio
+        3- Informar e-mail válido
+        4- Informar senha válida
+        5- Confirmar senha
+        6- Clicar em Cadastrar
+    
+    Resultado Esperado:
+        Sistema não permite o cadastro
+        Mensagem informando que o nome é obrigatório é exibida
+
+-----------------------------------------------------------------------------------
+
+CT - 005 | CADASTRO SEM PREENCHER senha
+
+    Objetivo:
+        Validar que o campo Senha é obrigatório para realizar o cadastro.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário não cadastrado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        1- Acessar tela de cadastro
+        2- Informar nome válido
+        3- Informar e-mail válido
+        4- Deixar campo Senha vazio
+        5- Deixar campo Confirmar Senha vazio
+        6- Clicar em Cadastrar
+    
+    Resultado Esperado:
+        Sistema não permite o cadastro
+        Mensagem informando que a senha é obrigatória é exibida
+
+-----------------------------------------------------------------------------------
+
+CT - 006 | CADASTRO COM SENHAS DIFERENTES
+
+    Objetivo:
+        Validar que o sistema não permite o cadastro quando os campos de senha são diferentes.
+
+    Prioridade:
+        Alta
+
+    Pré-condições:
+        Usuário não cadastrado.
+        Sistema disponível para acesso.
+
+    Passos:
+        1- Acessar tela de cadastro
+        2- Informar nome válido
+        3- Informar e-mail válido
+        4- Informar senha válida
+        5- Informar uma senha diferente no campo Confirmar Senha
+        6- Clicar em Cadastrar
+
+    Resultado Esperado:
+        Sistema não permite o cadastro
+        Mensagem informando que as senhas não coincidem é exibida
+
+-----------------------------------------------------------------------------------
+
+CT - 007 | CADASTRO COM E-MAIL JÁ CADASTRADO
+
+    Objetivo:
+        Validar que o sistema não permite o cadastro de um e-mail já existente.
+    
+    Prioridade:
+        Média
+    
+    Pré-condições:
+        Existe um usuário previamente cadastrado com o e-mail informado.
+        Sistema disponível para acesso.
+   
+    Passos:
+        1- Acessar tela de cadastro
+        2- Informar nome válido
+        3- Informar e-mail já cadastrado
+        4- Informar senha válida
+        5- Confirmar senha
+        6- Clicar em Cadastrar
+    
+    Resultado Esperado:
+        Sistema não permite o cadastro
+        Mensagem informando que o e-mail já está em uso é exibida
+
+----------------------------------------------------------------------------------
+
+CT - 008 | LOGIN VÁLIDOS
+
+    Objetivo:
+        Validar o login de usuário utilizando dados válidos.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário previamente cadastrado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar tela de Login.
+        Informar um e-mail cadastrado.
+        Informar senha correspondente ao usuário.
+        Clicar no botão de “Acessar”.
+    
+    Resultado esperado:
+        Login realizado com sucesso.
+        Usuário é direcionado para a página inicial.
+        As informações da conta são exibidas corretamente.
+
+----------------------------------------------------------------------------------
+
+CT - 009 |  LOGIN COM SENHA INCORRETA
+
+    Objetivo:
+        Validar que o sistema impede o login de usuário utilizando senha inválida.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário previamente cadastrado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar tela de Login.
+        Informar um e-mail cadastrado.
+        Informar senha inválida.
+        Clicar no botão de “Acessar”.
+    
+    Resultado esperado:
+        Login não é realizado.
+        Usuário permanece na tela de login.
+        Sistema exibe mensagem informando que as credenciais são inválidas
+
+----------------------------------------------------------------------------------
+
+CT - 010 | LOGIN COM E-MAIL INEXISTENTE
+
+    Objetivo:
+        Validar que o sistema impede login utilizando um e-mail inexistente.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar tela de Login.
+        Informar um e-mail não cadastrado.
+        Informar uma senha qualquer.
+        Clicar no botão de “Acessar”.
+    
+    Resultado esperado:
+        Login não é realizado.
+        Usuário permanece na tela de login.
+        Sistema exibe uma mensagem informando que as credenciais são inválidas.
+
+----------------------------------------------------------------------------------
+
+CT - 011 | LOGIN COM CAMPOS VAZIOS
+
+    Objetivo:
+        Validar que o sistema impede o login quando os campo ‘E-mail’ e ‘Senha’ não são preenchidos.
+    
+    Prioridade:
+        Média
+    
+    Pré-condições:
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar tela de Login.
+        Deixar o campo ‘E-mail’ em branco.
+        Deixar o campo ‘Senha’ em branco.
+        Clicar no botão de “Acessar”.
+    
+    Resultado esperado:
+        Login não é realizado.
+        Sistema exibe mensagens informando que os campos são obrigatórios.
+
+

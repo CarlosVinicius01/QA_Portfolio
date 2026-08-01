@@ -280,3 +280,259 @@ CT - 011 | LOGIN COM CAMPOS VAZIOS
         Sistema exibe mensagens informando que os campos são obrigatórios.
 
 
+----------------------------------------------------------------------------------
+
+CT - 012 | TRANSFERÊNCIA COM DADOS VÁLIDOS
+
+    Objetivo:
+        Validar que o usuário consegue realizar uma transferência utilizando dados válidos.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário autenticado no sistema.
+        Conta de destino existente.
+        Saldo suficiente para realizar a transferência.
+        Sistema disponível para acesso.
+        
+    Passos:
+        Acessar a tela de Transferência.
+        Informar o número da conta de destino.
+        Informar o dígito da conta.
+        Informar um valor válido.
+        Informar uma descrição (opcional).
+        Clicar no botão "Transferir".
+        
+    Resultado Esperado:
+        Transferência realizada com sucesso.
+        Saldo da conta de origem é atualizado.
+        Usuário visualiza uma mensagem de sucesso.
+        Transferência é registrada no extrato.
+
+----------------------------------------------------------------------------------
+
+CT - 013 | TRANSFERÊNCIA COM SALDO INSUFICIENTE
+
+    Objetivo:
+        Validar que o sistema impede uma transferência quando o saldo disponível é insuficiente.
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário autenticado no sistema.
+        Conta de destino existente.
+        Saldo inferior ao valor informado.
+        Sistema disponível para acesso.
+        
+    Passos:
+        Acessar a tela de Transferência.
+        Informar uma conta válida.
+        Informar um valor superior ao saldo disponível.
+        Clicar no botão "Transferir".
+        
+    Resultado Esperado:
+        Transferência não é realizada.
+        Saldo permanece inalterado.
+        Sistema exibe mensagem informando saldo insuficiente.
+
+----------------------------------------------------------------------------------
+
+CT - 014 | TRANSFERÊNCIA PARA CONTA INEXISTENTE
+
+    Objetivo:
+        Validar que o sistema impede a transferência para uma conta inexistente.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário autenticado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar a tela de Transferência.
+    I   nformar um número de conta inexistente.
+        Informar um dígito inexistente.
+        Informar um valor válido.
+        Clicar no botão "Transferir".
+    
+    Resultado Esperado:
+        Transferência não é realizada.
+        Sistema exibe mensagem informando que a conta não foi encontrada.
+
+----------------------------------------------------------------------------------
+
+CT - 015 | TRANSFERÊNCIA COM VALOR IGUAL A ZERO
+
+    Objetivo:
+        Validar que o sistema não permite realizar uma transferência com valor igual a zero.
+    
+    Prioridade:
+        Média
+    
+    Pré-condições:
+        Usuário autenticado.
+        Conta de destino existente.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar a tela de Transferência.
+        Informar uma conta válida.
+        Informar o valor "0".
+        Clicar no botão "Transferir".
+    
+    Resultado Esperado:
+        Transferência não é realizada.
+        Sistema exibe mensagem informando que o valor deve ser maior que zero.
+
+----------------------------------------------------------------------------------
+
+CT - 016 | TRANSFERÊNCIA COM VALOR NEGATIVO
+
+    Objetivo:
+        Validar que o sistema não permite realizar uma transferência utilizando valor negativo.
+    
+    Prioridade:
+        Média
+    
+    Pré-condições:
+        Usuário autenticado.
+        Conta de destino existente.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar a tela de Transferência.
+        Informar uma conta válida.
+        Informar um valor negativo.
+        Clicar no botão "Transferir".
+    
+    Resultado Esperado:
+        Transferência não é realizada.
+        Sistema exibe mensagem informando valor inválido.
+
+----------------------------------------------------------------------------------
+
+CT - 017 | TRANSFERÊNCIA SEM INFORMAR O VALOR
+
+   Objetivo:
+        Validar que o sistema impede a transferência quando o campo valor não é preenchido.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário autenticado.
+        Conta de destino existente.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar a tela de Transferência.
+        Informar uma conta válida.
+        Deixar o campo Valor em branco.
+        Clicar no botão "Transferir".
+    
+    Resultado Esperado:
+        Transferência não é realizada.
+        Sistema exibe mensagem informando que o campo Valor é obrigatório. 
+
+----------------------------------------------------------------------------------
+
+CT - 018 | TRANSFERÊNCIA SEM INFORMAR NÚMERO DE CONTA
+
+    Objetivo:
+        Validar que o sistema impede a transferência quando os dados da conta de destino não são informados.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário autenticado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar a tela de Transferência.
+        Deixar os campos Número da Conta e Dígito em branco.
+        Informar um valor válido.
+        Clicar no botão "Transferir".
+    
+    Resultado Esperado:
+        Transferência não é realizada.
+        Sistema exibe mensagem informando que os dados da conta são obrigatórios.
+
+----------------------------------------------------------------------------------
+
+CT - 019 | TRANSFERÊNCIA PARA A PRÓPRIA CONTA
+
+    Objetivo:
+        Validar o comportamento do sistema ao tentar realizar uma transferência para a própria conta.
+    
+    Prioridade:
+        Média
+    
+    Pré-condições:
+        Usuário autenticado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar a tela de Transferência.
+        Informar o número da própria conta.
+        Informar o dígito correspondente.
+        Informar um valor válido.
+        Clicar no botão "Transferir".
+    
+    Resultado Esperado:
+        Transferência não é realizada.
+        Sistema exibe mensagem informando que não é permitido transferir para a própria conta.
+
+----------------------------------------------------------------------------------
+
+CT - 020 | TRANSFERÊNCIA COM VALOR DECIMAL
+
+    Objetivo:
+        Validar que o sistema processa corretamente transferências utilizando valores decimais.
+    
+    Prioridade:
+        Baixa
+    
+    Pré-condições:
+        Usuário autenticado.
+        Conta de destino existente.
+        Saldo suficiente.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar a tela de Transferência.
+        Informar uma conta válida.
+        Informar um valor decimal (ex.: R$ 150,75).
+        Clicar no botão "Transferir".
+    
+    Resultado Esperado:
+        Transferência realizada com sucesso.
+        Valor transferido corresponde exatamente ao informado.
+        Saldo é atualizado corretamente.
+
+----------------------------------------------------------------------------------
+
+CT - 021 | CANCELAR TRANSFERÊNCIA ANTES DA CONFIRMAÇÃO
+
+    Objetivo:
+        Validar que o cancelamento da operação impede a realização da transferência.
+    
+    Prioridade:
+        Baixa
+    
+    Pré-condições:
+        Usuário autenticado.
+        Conta de destino existente.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Acessar a tela de Transferência.
+        Informar os dados da transferência.
+        Clicar em "Voltar" antes da confirmação.
+    
+    Resultado Esperado:
+        Transferência não é realizada.
+        Saldo permanece inalterado.
+        Nenhuma movimentação é registrada no extrato.

@@ -536,3 +536,228 @@ CT - 021 | CANCELAR TRANSFERÊNCIA ANTES DA CONFIRMAÇÃO
         Transferência não é realizada.
         Saldo permanece inalterado.
         Nenhuma movimentação é registrada no extrato.
+
+----------------------------------------------------------------------------------
+
+CT - 022 | VISUALIZAR EXTRATO APÓS LOGIN
+
+    Objetivo:
+        Validar que o usuário consegue visualizar o extrato após realizar o login.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário autenticado.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Realizar login no sistema.
+        Acessar a página inicial da conta.
+        Localizar a seção de extrato.
+    
+    Resultado Esperado:
+        O extrato é exibido corretamente.
+        As movimentações da conta são apresentadas.
+        O saldo atual é exibido.
+
+----------------------------------------------------------------------------------
+
+CT - 023 | VALIDAR REGISTRO DE TRANSFERÊNCIA NO EXTRATO
+
+    Objetivo:
+        Validar que uma transferência realizada é registrada corretamente no extrato.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário autenticado.
+        Conta de destino existente.
+        Transferência realizada com sucesso.
+        Sistema disponível para acesso.
+    
+    Passos:
+        Realizar uma transferência válida.
+        Acessar o extrato.
+        Localizar a movimentação recém-realizada.
+    
+    Resultado Esperado:
+        A transferência é exibida no extrato.
+        O valor corresponde ao valor transferido.
+        A descrição da movimentação está correta.
+
+----------------------------------------------------------------------------------
+
+CT - 024 | VALIDAR ATUALIZAÇÃO DO SALDO
+
+    Objetivo:
+        Validar que o saldo da conta é atualizado após uma transferência realizada.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Usuário autenticado.
+        Saldo disponível.
+        Transferência realizada com sucesso.
+    
+    Passos:
+        Consultar o saldo inicial.
+        Realizar uma transferência.
+        Atualizar a página.
+        Consultar novamente o saldo.
+    
+    Resultado Esperado:
+        O saldo é atualizado corretamente.
+        O valor debitado corresponde ao valor da transferência.
+
+----------------------------------------------------------------------------------
+
+CT - 025 | VALIDAR ORDENAÇÃO DAS MOVIMENTAÇÕES
+
+    Objetivo:
+        Validar que as movimentações são exibidas em ordem cronológica.
+    
+    Prioridade:
+        Média
+    
+    Pré-condições:
+        Usuário autenticado.
+        Existirem diversas movimentações registradas.
+    
+    Passos:
+        Acessar o extrato.
+        Verificar a ordem das movimentações.
+    
+    Resultado Esperado:
+        As movimentações são exibidas de acordo com as datas das transferências / movimentações.
+
+----------------------------------------------------------------------------------
+
+CT - 026 | VALIDAR CORES E SINALIZAÇÃO DAS MOVIMENTAÇÕES
+
+    Objetivo
+        Validar que as movimentações exibidas no extrato possuem a identificação visual correta para entradas e saídas financeiras.
+    
+    Prioridade
+        Alta
+    
+    Pré-condições
+        Usuário autenticado.
+        Existirem movimentações de entrada e saída no extrato.
+    
+    Passos
+        Acessar a tela de Extrato.
+        Localizar uma movimentação de entrada.
+        Verificar a cor utilizada para exibição do valor.
+        Localizar uma movimentação de saída.
+        Verificar a cor utilizada para exibição do valor.
+        Verificar se o valor da saída é exibido com o sinal negativo (-).
+    
+    Resultado Esperado
+        Valores de entrada são exibidos na cor verde.
+        Valores de saída são exibidos na cor vermelha.
+        Valores de saída iniciam com o sinal negativo (-).
+        A identificação visual das movimentações está de acordo com as regras de negócio.
+
+----------------------------------------------------------------------------------
+
+CT - 027 | VALIDAR EXTRATO SEM MOVIMENTAÇÕES
+
+    Objetivo:
+        Validar o comportamento do sistema quando a conta não possui movimentações.
+    
+    Prioridade:
+        Média
+    
+    Pré-condições:
+        Usuário autenticado.
+        Conta recém-criada sem operações.
+    
+    Passos:
+        Realizar login.
+        Acessar o extrato.
+    
+    Resultado Esperado:
+        O extrato é exibido.
+        Sistema informa que não existem movimentações.
+        Nenhum erro é apresentado.
+
+----------------------------------------------------------------------------------
+
+CT - 028 | VALIDAR RESPONSIVIDADE EM DESKTOP
+
+    Objetivo:
+        Validar que a aplicação é exibida corretamente em resolução Desktop.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Sistema disponível.
+        Navegador atualizado.
+    
+    Passos:
+        Acessar o BugBank em resolução Desktop (1920x1080).
+        Navegar pelas telas de Login, Cadastro e Home.
+        Verificar posicionamento dos elementos.
+        Verificar funcionamento dos botões.
+    
+    Resultado Esperado:
+        Todos os elementos são exibidos corretamente.
+        Não existem sobreposições.
+        Não existe rolagem horizontal.
+        Todos os botões permanecem acessíveis.
+
+----------------------------------------------------------------------------------
+
+CT - 029 | VALIDAR RESPONSIVIDADE EM TABLET
+
+    Objetivo:
+        Validar que a aplicação é exibida corretamente em dispositivos Tablet.
+    
+    Prioridade:
+        Média
+    
+    Pré-condições:
+        Sistema disponível.
+        Navegador atualizado.
+    
+    Passos:
+        Acessar o BugBank utilizando resolução de Tablet (768x1024).
+        Navegar pelas principais funcionalidades.
+        Verificar posicionamento dos elementos.
+        Validar funcionamento dos formulários.
+    
+    Resultado Esperado:
+        Interface adaptada ao tamanho da tela.
+        Todos os componentes permanecem acessíveis.
+        Nenhum elemento fica oculto.
+        Formulários permanecem funcionais.
+
+----------------------------------------------------------------------------------
+
+CT - 030 | VALIDAR RESPONSIVIDADE EM SMARTPHONE
+
+    Objetivo:
+        Validar que a aplicação é exibida corretamente em dispositivos móveis.
+    
+    Prioridade:
+        Alta
+    
+    Pré-condições:
+        Sistema disponível.
+        Navegador móvel ou modo responsivo.
+    
+    Passos:
+        Acessar o BugBank utilizando resolução Mobile (390x844 ou semelhante).
+        Navegar pelas telas principais.
+        Verificar menus, botões e formulários.
+        Realizar login.
+    
+    Resultado Esperado:
+        Interface adaptada ao dispositivo móvel.
+        Todos os botões permanecem clicáveis.
+        Campos são facilmente preenchidos.
+        Não existe rolagem horizontal.

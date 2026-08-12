@@ -1,0 +1,67 @@
+EX - 001 | CADASTRO COM DADOS VÁLIDOS (COM SALDO INICIAL)
+    
+    DADOS DO TESTE:
+        Nome: Vinicius Carlos
+        E-mail: saldo@email.com
+        Senha: 123teste
+    
+    EXECUÇÃO DO TESTE:
+        Data: 02/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+        CT-001_PASS.png
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 002 | CADASTRO COM DADOS VÁLIDOS (SEM SALDO INICIAL)
+
+    DADOS DO TESTE:
+        Nome: Carlos Vinicius
+        E-mail: teste@email.com
+        Senha: teste123
+    
+    EXECUÇÃO DO TESTE:
+        Data: 02/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+        CT-001_PASS.png
+    
+    Observação:
+        Nenhuma.
+
+
+
+
+
+
+
+

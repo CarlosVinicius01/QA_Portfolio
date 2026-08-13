@@ -53,10 +53,302 @@ EX - 002 | CADASTRO COM DADOS VÁLIDOS (SEM SALDO INICIAL)
         Conforme o resultado esperado.
     
     Evidência:
-        CT-001_PASS.png
+        CT-002_PASS.png
     
     Observação:
         Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 003 | CADASTRO COM E-MAIL INVÁLIDO
+
+    DADOS DO TESTE:
+        Nome: Carlos Vinicius
+        E-mail: testeemail.com
+        Senha: teste123
+    
+    EXECUÇÃO DO TESTE:
+        Data: 02/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+        CT-003_PASS.png
+    
+    Observações:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 004 | CADASTRO SEM PREENCHER NOME
+
+    DADOS DO TESTE:
+        E-mail: teste@email.com
+        Senha: teste123
+    
+    EXECUÇÃO DO TESTE:
+        Data: 28/06/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+        CT-004_PASS.png
+        
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 005 | CADASTRO SEM PREENCHER SENHA
+
+    DADOS DO TESTE:
+        Nome: Carlos Vinicius
+        E-mail: teste@email.com
+    
+    EXECUÇÃO DO TESTE:
+        Data: 02/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+        CT-005_PASS.png
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 006 | CADASTRO COM SENHAS DIFERENTES
+
+    DADOS DO TESTE:
+        Nome: Carlos Vinicius
+        E-mail: teste@email.com
+        Senha: teste123
+        Confirmação senha: 123teste
+    
+    EXECUÇÃO DO TESTE:
+        Data: 02/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+        CT-006_PASS.png
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 007 | CADASTRO COM E-MAIL JÁ CADASTRADO
+
+    DADOS DO TESTE:
+        Nome: Carlos Costa
+        E-mail: teste@email.com
+        Senha: 123teste
+    
+    EXECUÇÃO DO TESTE:
+        Data: 02/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ❌ FAIL
+    
+    Resultado Obtido:
+        O sistema permitiu o cadastro de uma pessoa utilizando um e-mail já previamente cadastrado.
+    
+    Resultado Esperado:
+        O sistema deve impedir o cadastro quando o e-mail informado já estiver cadastrado.
+        Mensagem informando que o e-mail já está em uso é exibida.
+    
+    Impacto:
+        Usuários podem criar múltiplas contas utilizando o mesmo endereço de e-mail
+    
+    Bug relacionado:
+        BUG-001
+    
+    Evidência:
+        Bug-001.mov
+
+-----------------------------------------------------------------------------------
+
+EX - 008 | LOGIN VÁLIDO 
+
+    DADOS DO TESTE:
+        E-mail: teste@email.com
+        Senha: teste123
+    
+    EXECUÇÃO DO TESTE:
+        Data:06/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+        CT-008_PASS.png
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 009 | LOGIN COM SENHA INCORRETA
+
+    DADOS DO TESTE:
+        E-mail: teste@email.com
+        Senha: 123teste
+    
+    EXECUÇÃO DO TESTE:
+        Data:06/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+        CT-009_PASS.png
+
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 010 | LOGIN COM E-MAIL INEXISTENTE
+
+    DADOS DO TESTE:
+        E-mail: teste@teste.com
+        Senha: teste123
+    
+    EXECUÇÃO DO TESTE:
+        Data:06/07/2026 
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ❌ FAIL
+    
+    Resultado Obtido:
+        O sistema autenticou o usuário e permitiu o acesso à aplicação utilizando um e-mail que não possui cadastro.
+    
+    Resultado Esperado:
+        O sistema deve impedir a autenticação quando o e-mail informado não estiver cadastrado e exibir uma mensagem informando que as credenciais são inválidas.
+    
+    Impacto:
+        Permite autenticação utilizando um usuário inexistente, comprometendo a segurança da aplicação.
+    
+    Bug relacionado:
+        BUG-002
+    
+    Evidência:
+        Bug-002.mov
+
+-----------------------------------------------------------------------------------
+
+EX - 011 | LOGIN COM CAMPOS VAZIOS
+
+    DADOS DO TESTE:
+        E-mail: 
+        Senha: 
+    
+    EXECUÇÃO DO TESTE:
+        Data:06/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.1
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+        CT-011_PASS.png
+
+    Observação:
+        Nenhuma.
+
+
+
+
+
 
 
 

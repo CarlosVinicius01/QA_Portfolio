@@ -217,7 +217,7 @@ EX - 007 | CADASTRO COM E-MAIL JÁ CADASTRADO
         BUG-001
     
     Evidência:
-        Bug-001.mov
+        CT-007_FAIL - Bug-001.mov
 
 -----------------------------------------------------------------------------------
 
@@ -313,7 +313,7 @@ EX - 010 | LOGIN COM E-MAIL INEXISTENTE
         BUG-002
     
     Evidência:
-        Bug-002.mov
+        CT-010_FAIL - Bug-002.mov
 
 -----------------------------------------------------------------------------------
 
@@ -371,7 +371,7 @@ EX - 012 | TRANSFERÊNCIA COM DADOS VÁLIDOS
         Conforme o resultado esperado.
     
     Evidência:
-
+        CT-012_PASS.mov
     
     Observação:
         Nenhuma.
@@ -402,7 +402,7 @@ EX - 013 | TRANSFERÊNCIA COM SALDO INSUFICIENTE
         Conforme o resultado esperado.
     
     Evidência:
-
+        CT-013_PASS.mov
     
     Observação:
         Nenhuma.
@@ -433,7 +433,7 @@ EX - 014 | TRANSFERÊNCIA PARA CONTA INEXISTENTE
         Conforme o resultado esperado.
     
     Evidência:
-
+        CT-014_PASS.mov
     
     Observação:
         Nenhuma.
@@ -464,7 +464,7 @@ EX - 015 | TRANSFERÊNCIA COM VALOR IGUAL A ZERO
         Conforme o resultado esperado.
     
     Evidência:
-
+        CT-015_PASS.mov
     
     Observação:
         Nenhuma.
@@ -495,7 +495,7 @@ EX - 016 | TRANSFERÊNCIA COM VALOR NEGATIVO
         Conforme o resultado esperado.
     
     Evidência:
-    
+        CT-016_PASS.mov
 
     Observação:
         Nenhuma.
@@ -526,6 +526,7 @@ EX - 017 | TRANSFERÊNCIA SEM INFORMAR O VALOR
         Conforme o resultado esperado.
     
     Evidência:
+        CT-017_PASS.png
 
     Observação:
         Nenhuma.
@@ -565,6 +566,7 @@ EX - 018 | TRANSFERÊNCIA SEM INFORMAR O NÚMERO DA CONTA
         BUG-003
     
     Evidência:
+        CT-018_FAIL - Bug-003.mov
 
 -----------------------------------------------------------------------------------
 
@@ -592,6 +594,7 @@ EX - 019 | TRANSFERÊNCIA PARA A PRÓPRIA CONTA
         Conforme o resultado esperado.
     
     Evidência:
+        CT-019_PASS.mov
 
     Observação:
         Nenhuma.
@@ -622,7 +625,7 @@ EX - 020 | TRANSFERÊNCIA COM VALOR DECIMAL
         Conforme o resultado esperado.
     
     Evidência:
-    
+        CT-020_PASS.mov
 
     Observação:
         Nenhuma.
@@ -653,6 +656,7 @@ EX - 021 | CANCELAR TRANSFERÊNCIA ANTES DA CONFIRMAÇÃO
         Conforme o resultado esperado.
     
     Evidência:
+        CT-021_PASS.mov
     
     Observação:
         Nenhuma.
@@ -682,7 +686,7 @@ EX - 022 | VISUALIZAR EXTRATO APÓS LOGIN
         Conforme o resultado esperado.
     
     Evidência:
-    
+        CT-022_PASS.png
     
     Observação:
         Nenhuma.
@@ -716,6 +720,7 @@ EX - 023 | VISUALIZAR REGISTRO DE TRANSFERÊNCIA NO EXTRATO
         Conforme o resultado esperado.
     
     Evidência:
+        CT-023_PASS.mov
 
     Observação:
         Nenhuma.
@@ -749,6 +754,7 @@ EX - 024 | VALIDAR ATUALIZAÇÃO DO SALDO
         Conforme o resultado esperado.
     
     Evidência:
+        CT-024_PASS.mov
 
     Observação:
         Nenhuma.
@@ -778,7 +784,8 @@ EX - 025 | VALIDAR ORDENS DE MOVIMENTAÇÃO
         Conforme o resultado esperado.
     
     Evidência:
-    
+        CT-025_PASS.mov
+
     Observação:
         Nenhuma.
 
@@ -807,7 +814,8 @@ EX - 026 | VALIDAR CORES E SINALIZAÇÃO DAS MOVIMENTAÇÕES
         Conforme o resultado esperado.
     
     Evidência:
-    
+        CT-026_PASS.mov
+
     Observação:
         Nenhuma.
 
@@ -836,7 +844,8 @@ EX - 027 | VALIDAR CORES E SINALIZAÇÃO DAS MOVIMENTAÇÕES
         Conforme o resultado esperado.
     
     Evidência:
-    
+        CT-027_PASS.png
+
     Observação:
         Nenhuma.
 
@@ -861,7 +870,7 @@ EX - 028 | VALIDAR RESPONSIVIDADE EM DESKTOP
         Conforme o resultado esperado.
     
     Evidência:
-
+        CT-028_PASS.mov
     
     Observação:
         Nenhuma.
@@ -887,7 +896,7 @@ EX - 029 | VALIDAR RESPONSIVIDADE EM TABLET
         Conforme o resultado esperado.
     
     Evidência:
-
+        CT-029_PASS.mov
     
     Observação:
         Nenhuma.
@@ -913,7 +922,7 @@ EX - 030 | VALIDAR RESPONSIVIDADE EM SMARTPHONE
         Conforme o resultado esperado.
     
     Evidência:
-
+        CT-030_PASS.mov
     
     Observação:
         Nenhuma.

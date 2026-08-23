@@ -1,0 +1,105 @@
+BG - 001| SISTEMA PERMITE CADASTRO COM E-MAIL JÁ CADASTRADO
+
+    Descrição:
+        O sistema permite realizar o cadastro utilizando um endereço de e-mail já cadastrado anteriormente.
+    
+    Pré-condições:
+        Existir um usuário previamente cadastrado.
+        Sistema disponível para acesso.
+    
+    Dados utilizados:
+        Conta 01:
+        E-mail: teste@email.com
+        Nome: Carlos Vinicius
+        Senha: teste123
+
+        Conta 02:
+        E-mail: teste@email.com
+        Nome: Carlos Costa
+        Senha: 123teste
+    
+    Passos para reproduzir:
+        Acessar a tela de Cadastro.
+        Informar um nome válido.
+        Informar um e-mail já cadastrado.
+        Informar uma senha válida.
+        Confirmar a senha.
+        Clicar em "Cadastrar".
+    
+    Resultado Esperado:
+        O sistema deve impedir o cadastro e exibir uma mensagem informando que o e-mail já está em uso.
+    
+    Resultado Obtido:
+        O sistema permite o cadastro utilizando um e-mail já cadastrado.
+    
+    Impacto:
+        Permite duplicidade de contas utilizando o mesmo endereço de e-mail, comprometendo a integridade dos dados.
+    
+    Severidade:
+        Alta
+    Prioridade:
+        Alta
+
+-----------------------------------------------------------------------------------
+
+BG - 002| SISTEMA PERMITE LOGIN COM E-MAIL INEXISTENTE
+
+    Descrição:
+        O sistema permite que um usuário realize login utilizando um endereço de e-mail que não está cadastrado na aplicação.
+    
+    Pré-condições:
+        Sistema disponível para acesso.
+        Não existir usuário cadastrado com o e-mail informado.
+    
+    Passos para reproduzir:
+        Acessar a tela de Login.
+        Informar um e-mail não cadastrado.
+        Informar uma senha qualquer.
+        Clicar no botão "Acessar".
+    
+    Resultado Esperado:
+        O sistema deve impedir a autenticação quando o e-mail informado não estiver cadastrado e exibir uma mensagem informando que as credenciais são inválidas.
+    
+    Resultado Obtido:
+        O sistema permitiu o acesso utilizando um e-mail inexistente.
+    
+    Impacto:
+        Permite autenticação utilizando um usuário não cadastrado, comprometendo a segurança e a confiabilidade do processo de autenticação.
+    
+    Severidade:
+        Alta
+    
+    Prioridade:
+        Alta
+
+-----------------------------------------------------------------------------------
+
+BG - 003| SISTEMA EXIBE MENSAGEM INCORRETA AO REALIZAR TRANSFERÊNCIA SEM INFORMAR A CONTA DE DESTINO
+
+    Descrição
+        Ao tentar realizar uma transferência sem informar o número e o dígito da conta de destino, o sistema exibe a mensagem "Não é possível transferir para a mesma conta", embora nenhuma conta tenha sido informada.
+    
+    Pré-condições:
+        Usuário autenticado.
+        Sistema disponível para acesso.
+    
+    Passos para reproduzir:
+        Acessar a tela de Transferência.
+        Deixar os campos Número da Conta e Dígito em branco.
+        Informar um valor válido.
+        Clicar no botão "Transferir".
+    
+    Resultado Esperado:
+        O sistema deve impedir a transferência e informar que os dados da conta de destino são obrigatórios.
+    
+    Resultado Obtido:
+        O sistema impede a transferência, porém exibe a mensagem "Não é possível transferir para a mesma conta", mesmo sem uma conta de destino informada.
+    
+    Impacto:
+        O sistema apresenta uma mensagem de erro inconsistente com a ação realizada, podendo confundir o usuário e dificultar a identificação da causa da falha.
+    
+    Severidade:
+        Média
+    
+    Prioridade:
+        Média

@@ -345,15 +345,575 @@ EX - 011 | LOGIN COM CAMPOS VAZIOS
     Observação:
         Nenhuma.
 
+-----------------------------------------------------------------------------------
 
+EX - 012 | TRANSFERÊNCIA COM DADOS VÁLIDOS
 
+    DADOS DO TESTE:
+        Número da conta: 966
+        Digito: 1
+        Valor: 200
+    
+    EXECUÇÃO DO TESTE:
+        Data: 12/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
 
+    
+    Observação:
+        Nenhuma.
 
+-----------------------------------------------------------------------------------
 
+EX - 013 | TRANSFERÊNCIA COM SALDO INSUFICIENTE
 
+    DADOS DO TESTE:
+        Número da conta: 966
+        Digito: 1
+        Valor: 10000
+    
+    EXECUÇÃO DO TESTE:
+        Data: 12/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
 
+    
+    Observação:
+        Nenhuma.
 
+-----------------------------------------------------------------------------------
 
+EX - 014 | TRANSFERÊNCIA PARA CONTA INEXISTENTE
 
+    DADOS DO TESTE:
+        Número da conta: 123
+        Digito: 4
+        Valor: 200
+    
+    EXECUÇÃO DO TESTE:
+        Data: 12/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
 
+    
+    Observação:
+        Nenhuma.
 
+-----------------------------------------------------------------------------------
+
+EX - 015 | TRANSFERÊNCIA COM VALOR IGUAL A ZERO
+
+    DADOS DO TESTE:
+        Número da conta: 966
+        Digito: 1
+        Valor: 0
+    
+    EXECUÇÃO DO TESTE:
+        Data: 12/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 016 | TRANSFERÊNCIA COM VALOR NEGATIVO
+
+    DADOS DO TESTE:
+        Número da conta: 966
+        Digito: 1
+        Valor: -100
+    
+    EXECUÇÃO DO TESTE:
+        Data: 12/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+    
+
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 017 | TRANSFERÊNCIA SEM INFORMAR O VALOR
+
+    DADOS DO TESTE:
+        Número da conta: 966
+        Digito: 1
+        Valor: 
+    
+    EXECUÇÃO DO TESTE:
+        Data: 12/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 018 | TRANSFERÊNCIA SEM INFORMAR O NÚMERO DA CONTA
+
+    DADOS DO TESTE
+        Número da Conta:
+        Dígito:
+        Valor: 200
+    
+    EXECUÇÃO DO TESTE
+        Data: 12/07/2026
+    
+    Executor:
+        Carlos Vinícius
+    
+    Ambiente:
+        Safari
+        macOS Tahoe 26.5.2
+    
+    Status:
+        ❌ FAIL
+    
+    Resultado Obtido:
+        O sistema impediu a transferência, porém exibiu a mensagem "Não é possível transferir para a mesma conta", mesmo sem uma conta de destino informada.
+    
+    Resultado Esperado:
+        O sistema deve impedir a transferência e informar que os campos da conta de destino são obrigatórios.
+    
+    Impacto:
+        Mensagem de validação inconsistente com a ação realizada.
+    
+    Bug Relacionado:
+        BUG-003
+    
+    Evidência:
+
+-----------------------------------------------------------------------------------
+
+EX - 019 | TRANSFERÊNCIA PARA A PRÓPRIA CONTA
+
+    DADOS DO TESTE:
+        Número da conta: 741
+        Digito: 3
+        Valor: 200
+    
+    EXECUÇÃO DO TESTE:
+        Data: 12/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 020 | TRANSFERÊNCIA COM VALOR DECIMAL
+
+    DADOS DO TESTE:
+        Número da conta: 766
+        Digito: 1
+        Valor: 200.50
+
+    EXECUÇÃO DO TESTE:
+        Data: 12/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+    
+
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 021 | CANCELAR TRANSFERÊNCIA ANTES DA CONFIRMAÇÃO
+
+    DADOS DO TESTE:
+        Número da conta: 966
+        Digito: 1
+        Valor: 100
+    
+    EXECUÇÃO DO TESTE:
+        Data: 12/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 022 | VISUALIZAR EXTRATO APÓS LOGIN
+
+    DADOS DO TESTE:
+        E-mail: saldo@email.com
+        Senha: 123teste
+    
+    EXECUÇÃO DO TESTE:
+        Data:13/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+    
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 023 | VISUALIZAR REGISTRO DE TRANSFERÊNCIA NO EXTRATO
+
+    DADOS DO TESTE:
+        E-mail: saldo@email.com
+        Senha: 123teste
+
+        Conta: 966
+        Digito: 1
+        Valor: 100
+    
+    EXECUÇÃO DO TESTE:
+        Data: 13/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 024 | VALIDAR ATUALIZAÇÃO DO SALDO
+
+    DADOS DO TESTE:
+        E-mail: saldo@email.com
+        Senha: 123teste
+
+        Conta: 966
+        Digito: 1
+        Valor: 99,50
+    
+    EXECUÇÃO DO TESTE:
+        Data: 13/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 025 | VALIDAR ORDENS DE MOVIMENTAÇÃO
+
+    DADOS DO TESTE:
+        E-mail: saldo@email.com
+        Senha: 123teste
+    
+    EXECUÇÃO DO TESTE:
+        Data: 13/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 026 | VALIDAR CORES E SINALIZAÇÃO DAS MOVIMENTAÇÕES
+
+    DADOS DO TESTE:
+        E-mail: saldo@email.com
+        Senha: 123teste
+    
+    EXECUÇÃO DO TESTE:
+        Data: 13/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 027 | VALIDAR CORES E SINALIZAÇÃO DAS MOVIMENTAÇÕES
+
+    DADOS DO TESTE:
+        E-mail: teste2@email.com
+        Senha: teste1234
+    
+    EXECUÇÃO DO TESTE:
+        Data: 13/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 028 | VALIDAR RESPONSIVIDADE EM DESKTOP
+
+    EXECUÇÃO DO TESTE:
+        Data: 15/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 029 | VALIDAR RESPONSIVIDADE EM TABLET
+
+    EXECUÇÃO DO TESTE:
+        Data: 15/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+
+    
+    Observação:
+        Nenhuma.
+
+-----------------------------------------------------------------------------------
+
+EX - 030 | VALIDAR RESPONSIVIDADE EM SMARTPHONE
+
+    EXECUÇÃO DO TESTE:
+        Data: 15/07/2026
+    
+    Executor:
+        Carlos Vinicius
+    
+    Ambiente:
+        Safari
+        macOs Thaoe 26.5.2
+    
+    Status:
+        ✅ PASS
+    
+    Resultado Obtido:
+        Conforme o resultado esperado.
+    
+    Evidência:
+
+    
+    Observação:
+        Nenhuma.

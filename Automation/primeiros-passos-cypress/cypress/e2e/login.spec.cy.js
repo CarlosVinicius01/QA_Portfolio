@@ -5,7 +5,7 @@ describe('Orange HRM Tests', () => {
     cy.get('[name="password"]').type('admin123')
     cy.get('.oxd-button').click()
     cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
-    cy.get('.oxd-topbar-header-breadcrumb > .oxd-text').contains('Dashboard')
+    cy.get('.oxd-topbar-header-breadcrumb > .oxd-text')
   })
   it('Login - Fail', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')

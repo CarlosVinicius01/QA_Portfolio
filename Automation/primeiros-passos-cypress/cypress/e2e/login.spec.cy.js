@@ -12,6 +12,6 @@ describe('Orange HRM Tests', () => {
     cy.get('[name="username"]').type('AdminFail')
     cy.get('[name="password"]').type('admin123fail')
     cy.get('[type="submit"]').click()
-    cy.get('.oxd-alert')
+    cy.get('[role="alert"]')
   })
 })

@@ -1,11 +1,11 @@
 import userData from '../fixtures/users/userData.json'
+import LoginPage from '../pages/loginPage.js'
+
+const loginPage = new LoginPage()
 
 describe('Orange HRM Tests', () => {
 
   const selectorList = {
-    usernameFild: "[name='username']",
-    passwordFild: "[name='password']",
-    loginButton: "[type='submit']",
     sectionTitleTopBar: ".oxd-topbar-header-breadcrumb-module",
     dashboardGrid: ".orangehrm-dashboard-grid",
     wrongCredentialAlert: "[role='alert']",
@@ -25,27 +25,18 @@ describe('Orange HRM Tests', () => {
   }
 
   it('Login - Success', () => {
-    cy.visit('/auth/login')
-    cy.get(selectorList.usernameFild).type(userData.userSucces.username)
-    cy.get(selectorList.passwordFild).type(userData.userSucces.password)
-    cy.get(selectorList.loginButton).click()
-    cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
-    cy.get(selectorList.dashboardGrid)
+    loginPage.accessLoginPage()
+    loginPage.loginWithUser(userData.userSucces.username, userData.userSucces.password)
   })
 
   it('Login - Fail', () => {
-    cy.visit('/auth/login')
-    cy.get(selectorList.usernameFild).type(userData.userFail.username)
-    cy.get(selectorList.passwordFild).type(userData.userFail.password)
-    cy.get(selectorList.loginButton).click()
-    cy.get(selectorList.wrongCredentialAlert)
+    loginPage.accessLoginPage()
+    loginPage.loginWithInvalidUser(userData.userFail.username, userData.userFail.password)
   })
 
-  it.only('User Info Update - Success', () => {
-    cy.visit('/auth/login')
-    cy.get(selectorList.usernameFild).type(userData.userSucces.username)
-    cy.get(selectorList.passwordFild).type(userData.userSucces.password)
-    cy.get(selectorList.loginButton).click()
+  it('User Info Update - Success', () => {
+    loginPage.accessLoginPage()
+    loginPage.loginWithUser(userData.userSucces.username, userData.userSucces.password)
     cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
     cy.get(selectorList.dashboardGrid)
     cy.get(selectorList.myInfoButton).click()

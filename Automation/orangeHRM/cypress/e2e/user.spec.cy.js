@@ -22,7 +22,7 @@ describe('Orange HRM Tests', () => {
     loginPage.checkAccessInvalid()
   })
 
-  it.only('User Info Update - Success', () => {
+  it('User Info Update - Success', () => {
     loginPage.accessLoginPage()
     loginPage.loginWithUser(userData.userSucces.username, userData.userSucces.password)
     
@@ -31,10 +31,10 @@ describe('Orange HRM Tests', () => {
     menuPage.accessMyInfo()
 
     myInfoPage.fillPersonalDetails('carlos', 'vinicius', 'costa')
-    myInfoPage.fillEmployeeDetails('123456', '654321', '121314', '2020-01-01', '2025-01-01')
-    myInfoPage.fillCustomField('321')
+    myInfoPage.fillEmployeeDetails('123456', '654321', '121314', '2020-01-01', '2025-01-01', '321')
     myInfoPage.fillStatus()
-    myInfoPage.saveForm()
+    myInfoPage.saveFormDetails()
+    myInfoPage.saveFormFields()
 
   })
 

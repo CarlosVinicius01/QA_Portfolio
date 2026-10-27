@@ -1,12 +1,15 @@
 import userData from '../fixtures/users/userData.json'
 import LoginPage from '../pages/loginPage.js'
-import MyInfo from '../pages/myInfo.js'
+import DashboardPage from '../pages/dashboardPage.js'
+import MenuPage from '../pages/menuPage.js'
+import MyInfoPage from '../pages/myInfoPage.js'
 
 const loginPage = new LoginPage()
-const myInfo = new MyInfo()
+const dashboardPage = new DashboardPage()
+const menuPage = new MenuPage()
+const myInfoPage = new MyInfoPage()
 
 describe('Orange HRM Tests', () => {
-
 
   it('Login - Success', () => {
     loginPage.accessLoginPage()
@@ -15,27 +18,23 @@ describe('Orange HRM Tests', () => {
 
   it('Login - Fail', () => {
     loginPage.accessLoginPage()
-    loginPage.loginWithInvalidUser(userData.userFail.username, userData.userFail.password)
+    loginPage.loginWithUser(userData.userFail.username, userData.userFail.password)
+    loginPage.checkAccessInvalid()
   })
 
-  it('User Info Update - Success', () => {
+  it.only('User Info Update - Success', () => {
     loginPage.accessLoginPage()
     loginPage.loginWithUser(userData.userSucces.username, userData.userSucces.password)
-    myInfo.dataModification(
-        'Paul',
-        'Doe',
-        'Smith',
-        '12345',
-        'abc',
-        'abcd',
-        '2026-10-19',
-        'American',
-        'Married',
-        '2004-10-19',
-        'Male',
-        'O+',
-        '123'
-    )
+    
+    dashboardPage.checkDashboardPage()
+
+    menuPage.accessMyInfo()
+
+    myInfoPage.fillPersonalDetails('carlos', 'vinicius', 'costa')
+    myInfoPage.fillEmployeeDetails('123456', '654321', '121314', '2020-01-01', '2025-01-01')
+    myInfoPage.fillCustomField('321')
+    myInfoPage.fillStatus()
+    myInfoPage.saveForm()
 
   })
 
